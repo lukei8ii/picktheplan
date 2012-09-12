@@ -1,0 +1,1025 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (71.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (4.9ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'schema_migrations'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36m (3.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreatePlans (20120912084234)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (6.5ms)[0m  CREATE TABLE "plans" ("id" serial primary key, "start" timestamp, "where" character varying(255), "what" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120912084234')[0m
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mPK and serial sequence (5.0ms)[0m   SELECT attr.attname, seq.relname
+ FROM pg_class seq,
+ pg_attribute attr,
+ pg_depend dep,
+ pg_namespace name,
+ pg_constraint cons
+ WHERE seq.oid = dep.objid
+ AND seq.relkind = 'S'
+ AND attr.attrelid = dep.refobjid
+ AND attr.attnum = dep.refobjsubid
+ AND attr.attrelid = cons.conrelid
+ AND attr.attnum = cons.conkey[1]
+ AND cons.contype = 'p'
+ AND dep.refobjid = '"plans"'::regclass
+
+  [1m[36m (3.1ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'plans'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (115.3ms)[0m  DROP DATABASE IF EXISTS "picktheplan_test"
+  [1m[36m (484.0ms)[0m  [1mCREATE DATABASE "picktheplan_test" ENCODING = 'utf8'[0m
+  [1m[35m (15.8ms)[0m  CREATE TABLE "plans" ("id" serial primary key, "start" timestamp, "where" character varying(255), "what" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.7ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, pg_get_indexdef(d.indexrelid), t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'schema_migrations'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname = ANY (current_schemas(false)) )
+ ORDER BY i.relname
+
+  [1m[36m (2.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120912084234')[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-09-12 04:09:01 -0500
+Served asset /rails.png - 200 OK (6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-09-12 04:10:06 -0500
+Served asset /rails.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-09-12 04:10:16 -0500
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2012-09-12 04:10:20 -0500
+Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.5ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+  Rendered plans/index.html.erb within layouts/application (3.5ms)
+Compiled plans.css  (36ms)  (pid 8983)
+Compiled scaffolds.css  (14ms)  (pid 8983)
+Compiled application.css  (69ms)  (pid 8983)
+Compiled jquery.js  (5ms)  (pid 8983)
+Compiled jquery_ujs.js  (0ms)  (pid 8983)
+Compiled plans.js  (874ms)  (pid 8983)
+Compiled application.js  (998ms)  (pid 8983)
+Completed 200 OK in 1339ms (Views: 1249.8ms | ActiveRecord: 37.1ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:10:22 -0500
+Served asset /plans.css - 200 OK (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:10:22 -0500
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:10:22 -0500
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:10:22 -0500
+Served asset /jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:10:22 -0500
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:10:22 -0500
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:10:22 -0500
+Served asset /plans.js - 200 OK (1ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:10:27 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (79.8ms)
+  Rendered plans/new.html.erb within layouts/application (85.3ms)
+Completed 200 OK in 99ms (Views: 91.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:16:41 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (9.4ms)
+  Rendered plans/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:16:41 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:16:41 -0500
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:16:41 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:16:41 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:16:41 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:16:41 -0500
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:16:41 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:16:56 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (17.9ms)
+  Rendered plans/new.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 189ms (Views: 119.4ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:16:56 -0500
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:16:56 -0500
+Served asset /plans.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:16:56 -0500
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:16:56 -0500
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:16:56 -0500
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:16:56 -0500
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:16:56 -0500
+Served asset /plans.js - 200 OK (1ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:16:58 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (8.5ms)
+  Rendered plans/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:16:58 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:16:58 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:16:58 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:16:58 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:16:58 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:16:58 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:16:58 -0500
+Served asset /application.js - 200 OK (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:23:28 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (18.5ms)
+  Rendered plans/new.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 190ms (Views: 121.4ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:23:28 -0500
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:23:28 -0500
+Served asset /plans.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:23:28 -0500
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:23:28 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:23:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:23:28 -0500
+Served asset /plans.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:23:28 -0500
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:23:31 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (9.4ms)
+  Rendered plans/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:23:31 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:23:31 -0500
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:23:31 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:23:31 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:23:31 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:23:31 -0500
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:23:31 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:26:40 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (44.6ms)
+  Rendered plans/new.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 53ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:26:40 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:26:40 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:26:40 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:26:40 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:26:40 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:26:40 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:26:40 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:29:20 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (8.9ms)
+  Rendered plans/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:29:21 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:29:21 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:29:21 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:29:21 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:29:21 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:29:21 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:29:21 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:31:30 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (41.7ms)
+  Rendered plans/new.html.erb within layouts/application (43.6ms)
+Completed 200 OK in 49ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:31:30 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:31:30 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:31:30 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:31:30 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:31:30 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:31:30 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:31:30 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:31:40 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (8.9ms)
+  Rendered plans/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:31:40 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:31:40 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:31:40 -0500
+Served asset /plans.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:31:40 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:31:40 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:31:40 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:31:40 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:32:20 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (40.3ms)
+  Rendered plans/new.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:32:20 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:32:20 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:32:20 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:32:20 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:32:20 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:32:20 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:32:20 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:32:21 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (8.8ms)
+  Rendered plans/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:32:22 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:32:22 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:32:22 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:32:22 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:32:22 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:32:22 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:32:22 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:33:01 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (41.6ms)
+  Rendered plans/new.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:33:01 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:33:01 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:33:01 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:01 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:01 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:01 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:01 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:33:13 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (9.0ms)
+  Rendered plans/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 16ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:33:13 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:33:13 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:13 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:13 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:33:13 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:13 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:13 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:33:22 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (9.5ms)
+  Rendered plans/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:33:22 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:22 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:22 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:22 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:33:22 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:33:22 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:22 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:33:45 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (9.0ms)
+  Rendered plans/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 47ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:46 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:33:46 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:33:46 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:46 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:46 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:33:46 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:33:46 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:34:09 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (8.8ms)
+  Rendered plans/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:34:09 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:34:09 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:34:09 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:34:09 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:34:09 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:34:09 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:34:09 -0500
+Served asset /application.js - 200 OK (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:35:28 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (18.1ms)
+  Rendered plans/new.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 191ms (Views: 121.2ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:35:29 -0500
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:35:29 -0500
+Served asset /plans.css - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:35:29 -0500
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:35:29 -0500
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:35:29 -0500
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:35:29 -0500
+Served asset /plans.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:35:29 -0500
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:38:05 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (9.3ms)
+  Rendered plans/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:38:06 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:38:06 -0500
+Served asset /plans.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:38:06 -0500
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:38:06 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:38:06 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:38:06 -0500
+Served asset /plans.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:38:06 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:38:45 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (44.6ms)
+  Rendered plans/new.html.erb within layouts/application (46.3ms)
+Completed 200 OK in 52ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:38:45 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:38:45 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:38:45 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:38:45 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:38:45 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:38:45 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:38:45 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:39:23 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (8.9ms)
+  Rendered plans/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:39:23 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:39:23 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:39:23 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:39:23 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:39:23 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:39:23 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:39:23 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:40:12 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (15.5ms)
+  Rendered plans/new.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 33ms (Views: 22.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:40:13 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:40:13 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:40:13 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:40:13 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:40:13 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:40:13 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:40:13 -0500
+Served asset /application.js - 200 OK (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:41:52 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (19.0ms)
+  Rendered plans/new.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 190ms (Views: 119.7ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:41:52 -0500
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:41:52 -0500
+Served asset /plans.css - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:41:52 -0500
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:41:52 -0500
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:41:52 -0500
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:41:52 -0500
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:41:52 -0500
+Served asset /plans.js - 200 OK (1ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:42:04 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (9.0ms)
+  Rendered plans/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:42:04 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:42:04 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:42:04 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:42:04 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:42:04 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:42:04 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:42:04 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:42:16 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (15.4ms)
+  Rendered plans/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 34ms (Views: 22.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/plans.js?body=1" for 127.0.0.1 at 2012-09-12 04:42:17 -0500
+Served asset /plans.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-12 04:42:17 -0500
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-12 04:42:17 -0500
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-12 04:42:17 -0500
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-12 04:42:17 -0500
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/plans.css?body=1" for 127.0.0.1 at 2012-09-12 04:42:17 -0500
+Served asset /plans.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-12 04:42:17 -0500
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-09-12 04:42:57 -0500
+Served asset /rails.png - 304 Not Modified (1ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2012-09-12 04:43:01 -0500
+Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.7ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+  Rendered plans/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2012-09-12 04:43:05 -0500
+Processing by PlansController#new as HTML
+  Rendered plans/_form.html.erb (42.0ms)
+  Rendered plans/new.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2012-09-12 04:43:15 -0500
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XbidVcI/qe/O7JqJsmpihW5b5C4rm/Zwo43FD/uOjDE=", "plan"=>{"start(1i)"=>"2012", "start(2i)"=>"9", "start(3i)"=>"12", "start(4i)"=>"09", "start(5i)"=>"43", "where"=>"Somewhere cool", "what"=>"Doing stuff"}, "commit"=>"Create Plan"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (52.1ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:43:15 UTC +00:00], ["start", Wed, 12 Sep 2012 09:43:00 UTC +00:00], ["updated_at", Wed, 12 Sep 2012 09:43:15 UTC +00:00], ["what", "Doing stuff"], ["where", "Somewhere cool"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/plans/1
+Completed 302 Found in 58ms (ActiveRecord: 53.5ms)
+
+
+Started GET "/plans/1" for 127.0.0.1 at 2012-09-12 04:43:15 -0500
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (0.7ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered plans/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2012-09-12 04:43:20 -0500
+Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" 
+  Rendered plans/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.3ms)

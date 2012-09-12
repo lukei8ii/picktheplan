@@ -1,0 +1,19 @@
+en:
+
+  activerecord:
+    models:
+      plan: "Plan"
+
+    attributes:
+      plan:
+        start: "When"
+        where: "Where"
+        what: "What"
+
+    errors:
+      models:
+        plan:
+          attributes:
+            start: "When"
+            where: "Where"
+            what: "What"

@@ -1,0 +1,1309 @@
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Rendered plans/index.html.erb (49.5ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Rendered plans/_form.html.erb (96.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/plans" for 127.0.0.1 at 2012-09-12 04:02:51 -0500
+Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.7ms)[0m  SELECT "plans".* FROM "plans" 
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (45.0ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  Rendered plans/_form.html.erb (9.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (7.8ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:02:51 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:02:51 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlan Load (0.7ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:02:51 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:02:51 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "2"]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:02:51 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:02:51 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"3"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/3
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:02:51 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:02:51 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"4"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/4
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:02:51 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:02:51 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{"these"=>"params"}, "id"=>"5"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "5"]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"6"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"7"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "7"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans/8
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35mPlan Load (0.7ms)[0m  SELECT "plans".* FROM "plans" ORDER BY "plans"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans/9
+Completed 302 Found in 52ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "plans" 
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans/10
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "plans" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "plans" 
+Processing by PlansController#destroy as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "plans" WHERE "plans"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#destroy as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "plans" WHERE "plans"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#new as HTML
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:02:52 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.4ms)[0m  SELECT "plans".* FROM "plans" 
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Rendered plans/show.html.erb (45.8ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Rendered plans/_form.html.erb (16.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (5.5ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#destroy as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPlan Load (0.7ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "14"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "plans" WHERE "plans"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "plans" 
+Processing by PlansController#destroy as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "15"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "plans" WHERE "plans"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PlansController#new as HTML
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "16"]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "17"]]
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/19
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/20
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/21
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36mPlan Load (0.5ms)[0m  [1mSELECT "plans".* FROM "plans" ORDER BY "plans"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"22"}
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "22"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"23"}
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "23"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"24"}
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "24"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans/24
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{"these"=>"params"}, "id"=>"25"}
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "25"]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"26"}
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "26"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans/26
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Rendered plans/_form.html.erb (56.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/plans" for 127.0.0.1 at 2012-09-12 04:07:13 -0500
+Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" 
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/plans" for 127.0.0.1 at 2012-09-12 04:07:34 -0500
+Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.4ms)[0m  SELECT "plans".* FROM "plans" 
+  Rendered plans/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 73ms (Views: 58.7ms | ActiveRecord: 11.6ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  Rendered plans/_form.html.erb (60.1ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  Rendered plans/_form.html.erb (55.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (5.2ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:07:34 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:34 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mPlan Load (0.6ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "27"]]
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{"these"=>"params"}, "id"=>"28"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "28"]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"29"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "29"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/29
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"30"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "30"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/30
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"31"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "31"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"32"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "32"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" 
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "34"]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#new as HTML
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "plans" 
+Processing by PlansController#destroy as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "35"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "plans" WHERE "plans"."id" = $1[0m  [["id", 35]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#destroy as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "36"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "plans" WHERE "plans"."id" = $1[0m  [["id", 36]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/37
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/38
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:07:35 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans/39
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+  [1m[35mPlan Load (0.5ms)[0m  SELECT "plans".* FROM "plans" ORDER BY "plans"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/plans" for 127.0.0.1 at 2012-09-12 04:08:03 -0500
+Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.4ms)[0m  SELECT "plans".* FROM "plans" 
+  Rendered plans/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 73ms (Views: 58.9ms | ActiveRecord: 11.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  Rendered plans/_form.html.erb (60.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  Rendered plans/_form.html.erb (9.1ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (5.8ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#edit as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mPlan Load (0.7ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "40"]]
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#new as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"41"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "41"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"42"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "42"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"43"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "43"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/43
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{"these"=>"params"}, "id"=>"44"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "44"]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"45"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "45"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/45
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "46"]]
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#destroy as HTML
+  Parameters: {"id"=>"47"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "47"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "plans" WHERE "plans"."id" = $1  [["id", 47]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+Processing by PlansController#destroy as HTML
+  Parameters: {"id"=>"48"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "48"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "plans" WHERE "plans"."id" = $1  [["id", 48]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "plans" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" 
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:08:03 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans/50
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "plans" 
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:08:04 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:08:04 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans/51
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "plans" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 09:08:04 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 09:08:04 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans/52
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+  [1m[35mPlan Load (0.6ms)[0m  SELECT "plans".* FROM "plans" ORDER BY "plans"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Rendered plans/show.html.erb (61.7ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Rendered plans/_form.html.erb (35.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Rendered plans/_form.html.erb (9.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (40.9ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{"these"=>"params"}, "id"=>"53"}
+  [1m[36mPlan Load (10.8ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "53"]]
+Completed 200 OK in 19ms (Views: 3.5ms | ActiveRecord: 10.8ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"54"}
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "54"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans/54
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"55"}
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "55"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans/55
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"56"}
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "56"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"57"}
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "57"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mPlan Load (0.2ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "58"]]
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#index as HTML
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT "plans".* FROM "plans" [0m
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "plans" 
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans/60
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "plans" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans/61
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/62
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36mPlan Load (0.5ms)[0m  [1mSELECT "plans".* FROM "plans" ORDER BY "plans"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#edit as HTML
+  Parameters: {"id"=>"63"}
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "63"]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PlansController#new as HTML
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+Processing by PlansController#destroy as HTML
+  Parameters: {"id"=>"64"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "64"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "plans" WHERE "plans"."id" = $1  [["id", 64]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "plans" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:02:43 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#destroy as HTML
+  Parameters: {"id"=>"65"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "65"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "plans" WHERE "plans"."id" = $1  [["id", 65]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/plans" for 127.0.0.1 at 2012-09-12 05:02:43 -0500
+Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" 
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Rendered plans/_form.html.erb (18.3ms)
+  Rendered plans/new.html.erb (68.8ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Rendered plans/_form.html.erb (9.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/plans" for 127.0.0.1 at 2012-09-12 05:04:12 -0500
+Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.5ms)[0m  SELECT "plans".* FROM "plans" 
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (5.2ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" 
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"67"}
+  [1m[35mPlan Load (0.6ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "67"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"68"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "68"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{"these"=>"params"}, "id"=>"69"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "69"]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"70"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "70"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/70
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"71"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "71"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/71
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "72"]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#edit as HTML
+  Parameters: {"id"=>"73"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "73"]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:04:12 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/74
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:04:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:04:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/75
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+  [1m[36mPlan Load (0.5ms)[0m  [1mSELECT "plans".* FROM "plans" ORDER BY "plans"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:04:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:04:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/76
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:04:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:04:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#destroy as HTML
+  Parameters: {"id"=>"77"}
+  [1m[35mPlan Load (0.4ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "77"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "plans" WHERE "plans"."id" = $1  [["id", 77]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:04:13 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:04:13 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+Processing by PlansController#destroy as HTML
+  Parameters: {"id"=>"78"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "78"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "plans" WHERE "plans"."id" = $1  [["id", 78]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/plans
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "plans" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#new as HTML
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Rendered plans/index.html.erb (6.8ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Rendered plans/_form.html.erb (16.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Rendered plans/_form.html.erb (55.8ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+
+
+Started GET "/plans" for 127.0.0.1 at 2012-09-12 05:06:36 -0500
+Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.5ms)[0m  SELECT "plans".* FROM "plans" 
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (5.3ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#edit as HTML
+  Parameters: {"id"=>"79"}
+  [1m[35mPlan Load (0.6ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "79"]]
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{"these"=>"params"}, "id"=>"80"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "80"]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"81"}
+  [1m[35mPlan Load (0.5ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "81"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/81
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"82"}
+  [1m[35mPlan Load (0.2ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "82"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/82
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"83"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "83"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#update as HTML
+  Parameters: {"plan"=>{}, "id"=>"84"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "84"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#new as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/85
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/86
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36mPlan Load (0.5ms)[0m  [1mSELECT "plans".* FROM "plans" ORDER BY "plans"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans/87
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by PlansController#create as HTML
+  Parameters: {"plan"=>{}}
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "plans" 
+Processing by PlansController#destroy as HTML
+  Parameters: {"id"=>"88"}
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "88"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "plans" WHERE "plans"."id" = $1[0m  [["id", 88]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "plans" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PlansController#destroy as HTML
+  Parameters: {"id"=>"89"}
+  [1m[36mPlan Load (0.3ms)[0m  [1mSELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1[0m  [["id", "89"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "plans" WHERE "plans"."id" = $1[0m  [["id", 89]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/plans
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#index as HTML
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" 
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "plans" ("created_at", "start", "updated_at", "what", "where") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["start", nil], ["updated_at", Wed, 12 Sep 2012 10:06:36 UTC +00:00], ["what", nil], ["where", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"91"}
+  [1m[35mPlan Load (0.3ms)[0m  SELECT "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT 1  [["id", "91"]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
